@@ -1,0 +1,90 @@
+<!--pages/shop/shop.wxml-->
+<view class="conet">
+	<view class="zhezhao" style='display:{{display}}' bindtap="hideModal"></view>
+	<scroll-view class='xialakuang' wx:if="{{chooseSize}}" animation='{{animationData}}'>
+		<view bindtap="xiala" wx:for="{{shopname}}" wx:key="key" data-index="{{index}}" data-id="id">
+			<view class="shop {{index==currentindex?'bg1':''}}">{{item.name}}</view>
+		</view>
+	</scroll-view>
+	<view class="backgroud">
+		<view class="section">
+			<navigator hover-class="none" class="dizhi" url="../shop/position/postion">
+				<image src="../icon/weizhi.png" style="width:16px;height:16px;"></image>
+				<view class="weizhi">{{location}}</view>
+			</navigator>
+			<view class="shopname" animation='{{animationshop}}' style="display:{{display2}}">
+				{{mengdian}}
+			</view>
+			<view class="mengdian" bindtap="chooseSezi">
+				<image src="../icon/shop2.png" mode="aspectFit" style="width:30px;height:30px;"></image>
+			</view>
+		</view>
+		<navigator class="search" url="../shop/search/search">
+			<image src="../icon/search.png" mode="aspectFit" style="width:30px;height:25px;"></image>
+			<view>搜索商品</view>
+		</navigator>
+		<view class="bannerview">
+			<swiper class="swiper" indicator-dots autoplay interval="2000">
+				<block wx:for="{{imageUrl}}" wx:key="key">
+					<swiper-item class="swiper">
+						<image class="swiper" src="{{item}}"></image>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+		<view class="gongge">
+			<view class="navigator" wx:for="{{images}}" wx:key="images" bindtap="fenlei" data-index="{{index}}">
+				<image class="imagess" mode="widthFix" src="{{item.image_src}}"></image>
+			</view>
+		</view>
+		<view class="xiaobiaoti">
+			<view class="biaoti">精选活动</view>
+			<view class="xiaozi">优质精选天天有</view>
+		</view>
+		<view class="louceng">
+			<navigator url="../sorts/productlist/productlist?cid=15" class="left" >
+				<view style="color:white;margin-left:10px;margin-top:10rpx;font-weight: bold;letter-spacing: 0.1em;">大屏彩电</view>
+				<view style="color:white;margin-left:10px;letter-spacing: 0.1em;">这感觉,够爽!</view>
+				<view style="height:60%;width:80%; margin-top:10rpx; margin-left:20%">
+					<image style=" max-width: 100%;max-height:100%;" src="../banner/chuangwei.png"></image>
+				</view>
+			</navigator>
+			<view class="right">
+				<view class="blue">
+					<view class="a1">
+						<view style="color:white; ">手机专区
+						</view>
+						<view style="height:70%;width:70%;" >
+						<image style=" max-width: 100%;max-height:100%; margin-left:25%;;" src="../banner/iphone.png"></image>
+						</view>
+					</view>
+					<navigator hover-class="none" url="../shop/choujiang/choujiang" class="a2">
+						<view style="color:white;" bindtap="choujiang">每日抽奖</view>
+					</navigator>
+				</view>
+				<view class="a3">
+					<view style="color:white;" bindtap="choujiang">领劵中心</view>
+				</view>
+			</view>
+		</view>
+		<block>
+			<view class="goodsinfo" >
+			  <view class="guanggao">
+				<image style=" max-width: 100%;max-height:100%;" src="../banner/timg.png"></image>
+				</view>
+				<view class="goods" wx:for="{{shopgoods}}" wx:key="goods_id" >
+					<navigator class="goodimg" url="../sorts/gooddetail/gooddetail?goods_id={{item.goods_id}}">
+						<image src="{{item.goods_big_logo?item.goods_big_logo:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596620416937&di=b7bdd94802eb4497515e2b48f1155978&imgtype=0&src=http%3A%2F%2Fimages.sucaihuo.com%2Fjquery%2F27%2F2783%2Fbig.jpg'}}"></image>
+				</navigator>
+					<view class="goodsname"><text>{{item.goods_name}}</text></view>
+					<view class="goodsbottom">
+						<view class="goodprice">￥{{item.goods_price}}</view>
+						<view class="editcart"  bindtap="editgoodsnum" data-yunsuanfu="{{1}}" data-index="{{index}}" data-id="{{item.goods_id}}">
+							<view>+</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</block>
+	</view>
+</view>

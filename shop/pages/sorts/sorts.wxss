@@ -1,0 +1,68 @@
+/* pages/sorts/sorts.wxss */
+.head{
+  width:100%;
+  height:10vh;
+  background-color:#407E98;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.search{
+  background-color: white;
+  opacity: 0.4;
+  font-size: 18px;
+  width: 92%;
+  height: 50rpx;
+  display: flex;
+  border-radius: 15rpx;
+  justify-content: center;
+}
+.body{
+  display: flex;
+  flex-direction:row;
+}
+.left{
+  flex: 2;
+  height:90vh;
+  background-color:#f7f7f7;
+}
+.leftitem{
+   text-align: center;
+   width: 100%;
+   height: 50rpx;
+}
+.right{
+  flex: 5;
+  width: 80%;
+  height:88vh;
+  background-color:white;
+}
+.righttitle{
+  border-bottom: 2rpx solid black;
+}
+.rightitems{
+  flex: 1;
+  text-align: center;
+}
+.box{
+  width: 32%;
+  border-radius: 15rpx;
+}
+.box image{
+  height: 100%;
+}
+.goodlist{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+
+.active{
+  border-top: 5rpx solid #407E98 ;
+  border-bottom: 5rpx solid #407E98 ;
+  background-color:	white;
+  color: black;
+  font-weight: bold;
+}

@@ -1,0 +1,45 @@
+<!--pages/cartfull/pay/pay.wxml-->
+	<view class="conent">
+		<view class="useraddress">
+			<view>{{address}}</view>
+			<view style="font-size:28rpx">大门</view>
+			<view class="user">
+				<view style="margin-right:10rpx">周政梁</view>
+				<view>1835756172</view>
+			</view>
+		</view>
+		<view class="img">
+			<image src="../../banner/edit.png"></image>
+		</view>
+	</view>
+  <view class="carefull">
+		<view class="title">购物车</view>
+	</view>
+  	<view class="goods" wx:for="{{cart}}" wx:key="good_id" data-index="index" data-id="{{item.goods_id}}">
+				<navigator class="goodimages" url="../sorts/gooddetail/gooddetail?goods_id={{item.goods_id}}">
+					<image src="{{item.goods_small_logo}}"></image>
+				</navigator>
+				<view class="goodinfo">
+					<view class="info">{{item.goods_name}}</view>
+					<view class="pricenum">
+						<view class="price">￥{{item.goods_price}}</view>
+						<view class="edit">
+							<view class="editnum"> <view>X</view></view>
+							<view class="num">{{item.num}}</view>
+							</view>
+						</view>
+					</view>
+			</view>
+  <view class="bottom">
+			<view class="count">
+				<view class="price1">
+					<view>合计：</view>
+					<view style="color:red">￥{{goodprice}}</view>
+				</view>
+				<view style="margin-left:auto;">已免配送费</view>
+			</view>
+			<view class="btn" bindtap="Pay">
+				<view>支付</view>
+				<view style="display:{{isHidenum}}">({{goodnum}})</view>
+			</view>
+		</view>

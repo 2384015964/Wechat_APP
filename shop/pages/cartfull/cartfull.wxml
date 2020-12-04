@@ -1,0 +1,82 @@
+<!--pages/cartfull/cartfull.wxml-->
+<view wx:if="!address">
+	<view class="conent">
+		<view class="useraddress">
+			<view>{{address}}</view>
+			<view style="font-size:28rpx">大门</view>
+			<view class="user">
+				<view style="margin-right:10rpx">周政梁</view>
+				<view>1835756172</view>
+			</view>
+		</view>
+		<view class="img">
+			<image src="../banner/edit.png"></image>
+		</view>
+	</view>
+</view>
+<view wx:else>
+	<button type="primary" plain>点击添加收货地址</button>
+</view>
+	<view class="carefull">
+		<view class="title">购物车</view>
+	</view>
+	<view class="main">
+		<view wx:if="{{cart.length==0}}">
+			<view class="kong">
+				<view>
+					<image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3214428190,3968304704&fm=26&gp=0.jpg"></image>
+				</view>
+				<view>购物车空空如也</view>
+				<navigator class="tosorts" open-type="switchTab" url="../sorts/sorts">去逛逛</navigator>
+			</view>
+		</view>
+		<view wx:else>
+			<view class="goods" wx:for="{{cart}}" wx:key="good_id" data-index="index" data-id="{{item.goods_id}}">
+				<view class="checkbox">
+					<checkbox-group data-id="{{item.goods_id}}" bindchange="changeitem">
+						<checkbox checked="{{item.checked}}"></checkbox>
+					</checkbox-group>
+				</view>
+				<navigator class="goodimages" hover-class="none" url="../sorts/gooddetail/gooddetail?goods_id={{item.goods_id}}">
+					<image src="{{item.goods_small_logo}}"></image>
+				</navigator>
+				<view class="goodinfo">
+					<view class="info">{{item.goods_name}}</view>
+					<view class="pricenum">
+						<view class="price">￥{{item.goods_price}}</view>
+						<view class="edit">
+							<view class="editnum" bindtap="editgoodsnum" data-yunsuanfu="{{-1}}" data-id="{{item.goods_id}}">
+								<view>-</view>
+							</view>
+							<view class="num">{{item.num}}</view>
+							<view class="editnum1" bindtap="editgoodsnum" data-yunsuanfu="{{1}}" data-id="{{item.goods_id}}">
+								<view>+</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<navigator class="tosorts" open-type="switchTab" url="../sorts/sorts">去购买</navigator>
+			<view class="bottom">
+			<view class="check2">
+				<checkbox-group bindchange="changegoodslist">
+					<checkbox checked="{{allchecked}}">全选</checkbox>
+				</checkbox-group>
+			</view>
+			<view class="eidtcart" bindtap="clear">
+				<view>清空购物车</view>
+			</view>
+			<view class="count">
+				<view class="price1">
+					<view>合计：</view>
+					<view style="color:red">￥{{goodprice}}</view>
+				</view>
+				<view style="margin-left:auto;">已免配送费</view>
+			</view>
+			<view class="btn" bindtap="Pay">
+				<view>结算</view>
+				<view style="display:{{isHidenum}}">({{goodnum}})</view>
+			</view>
+		</view>
+		</view>
+	</view>

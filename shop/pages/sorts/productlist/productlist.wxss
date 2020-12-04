@@ -1,0 +1,87 @@
+/* pages/sorts/productlist/product list.wxss */
+.head{
+  width:100%;
+  height:8vh;
+  background-color:#407E98;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.search{
+  background-color: white;
+  opacity: 0.4;
+  font-size: 18px;
+  width: 92%;
+  height: 50rpx;
+  display: flex;
+  border-radius: 15rpx;
+  justify-content: center;
+}
+.tabs{
+  width: 100%;
+  height: 5vh;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  /* align-items: center; */
+}
+.tabsbox{
+  flex: 3;
+  width: 33%;
+}
+.active{
+  border-bottom: 8rpx solid #407E98 ;
+  color: #407E98;
+  font-weight: bold;
+}
+.no1{
+  width: 100%;
+  /* background-color: chartreuse; */
+}
+.no1goods{
+  display: flex;
+  width: 100%;
+}
+.leftgoods{
+  flex:2;
+  /* width: 30%; */
+  height: 20vh;
+  /* background-color: red; */
+  
+}
+.rightgoods{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  /* background-color: blue; */
+  /* align-items: flex-end; */
+  /* justify-content: space-between; */
+}
+.img{
+width:100%;
+height: 100%;
+}
+.goodstitle{
+  margin-bottom: auto;
+}
+.bottom{
+  display: flex;
+}
+.price{
+  color: red;
+  margin-right: auto;
+}
+.add{
+  color:white;
+  margin-right: 10rpx;
+  background-color: forestgreen;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,148 @@
+/* pages/myinfo/myinfo.wxss */
+@import "../banner/iconfont2.wxss";
+page{
+  background-color: #fffdfd;
+}
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 45rpx;
+ }
+   
+ .header image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+ }
+   
+ .content {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+ }
+   
+ .content text {
+  display: block;
+  color: #f7f6f6;
+  margin-top: 40rpx;
+ }
+   
+ .bottom {
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+ }
+ .conent{
+  position: relative;
+  background-color: rgb(251, 251, 251);
+}
+.userbg{
+  height:30vh;
+  /* background-color: rgb(252, 225, 188); */
+  /* position: absolute; */
+  /* -webkit-filter: blur(2px) brightness(110%); */
+}
+.userinfo{
+  position: absolute;
+  margin-top: -40%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  text-align: center;
+}
+.username{
+  color: white;
+}
+.usericon image{
+  height: 100rpx;
+  width:100rpx;
+  border-radius: 50%;
+}
+.img{
+  filter: blur(10rpx);
+  margin-left: -5px; 
+}
+.vip{
+  position: relative;
+  height: 10vh;
+  margin-left: 10%;
+  margin-top:-10%;
+  border-radius: 10rpx;
+   display: flex;
+}
+.vip image{
+  width: 90%;
+}
+.vipicon{
+  position: absolute;
+}
+.vipicon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.vip image{
+   max-height: 100%;
+   max-width: 100%;
+   border-radius: 10rpx;
+}
+.viptext{
+  position: absolute;
+  /* color:#d99009 ; */
+  font-weight: bold;
+  margin-left: 50rpx;
+
+}
+.vipbutton{
+  width: 25%;
+  height: 5vh;
+  font-size: 30rpx;
+  color: #FFEC8B;
+  background-color: black;
+  margin-left: 60%;
+  margin-top: 5%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.dingdan{
+  /* border: 1rpx solid black; */
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  margin-top: 3%;
+  margin-left:1%;
+  border-radius: 10rpx;
+  box-shadow: 1rpx 1rpx 8rpx 0.2rpx rgb(201, 201, 201);
+}
+.border{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+}
+.moukua{
+  display: flex;
+  flex-direction: row;
+  flex:5;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}
+.moukua navigator{
+  flex: 1;
+  width: 25%;
+  text-align: center;
+}
+.gongneng{
+  display: flex;
+  flex-direction:row;
+  border-top: 20rpx solid #E8E8E8;
+  height: 5vh;
+}
+.address{
+  margin-right:  auto;
+}

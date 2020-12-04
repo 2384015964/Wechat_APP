@@ -1,0 +1,258 @@
+/* pages/shop/shop.wxss */
+.backgroud{
+  display: flex;
+  width: 100%;
+  height:125px;
+  background-color: #407E98;
+  border-radius: 0 0 30% 30%;
+  flex-direction: column;
+  align-items: center;
+}
+.section{
+  width: 95%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dizhi{
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  width:55%;
+  color: white;
+}
+.weizhi{
+  font-size: 30rpx;
+}
+.mengdian{
+  margin-left:auto;
+}
+.shopname{
+  margin-left:auto;
+  height: 20px;
+  width: 30% ;
+  border:1px solid white;
+  border-radius: 10px;
+  background-color: white;
+  opacity: 0.6;
+  text-align: center;
+}
+.xialakuang{
+  position:absolute;
+  margin-top: 20px;
+  margin-left: 25%;
+  width:70%;
+  height: 200px;
+  background-color:white;
+  /* opacity: 0.6; */
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+}
+.zhezhao{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.2;
+  z-index: 998;
+}
+.xialakuang:before{
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid white;
+  /* opacity: 0.8; */
+  position: absolute;
+  top: -14px;
+  left: 90%;
+}
+.shop{
+   width: 100%;
+   margin-top: 10px;
+   justify-content: center;
+   text-align: center;
+}
+.bg1{
+  color: #63B8FF;
+}
+.bg2{
+  color: black;
+}
+.search{
+  background-color: white;
+  opacity: 0.3;
+  font-size: 18px;
+  width: 92%;
+  margin: 5px 5% 5px 5%;
+  height: 30px;
+  display: flex;
+  border-radius: 15rpx;
+  justify-content: center;
+}
+.bannerview{
+  width: 92%;
+  display: flex;
+  justify-content: center;
+  margin-left: 2%;
+  border-radius: 50px;
+}
+.swiper{
+  width: 100%;
+  height: 150px;
+  border-radius:25px;
+}
+.gongge{
+  display: flex; 
+}
+.navigator{
+  flex:1;
+  width: 25%;
+  width: 125rpx;
+  margin-left: 30rpx;
+}
+.imagess{
+ max-width: 100%;
+ max-height:100%;
+}
+.xiaobiaoti{
+  margin-right:40%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.biaoti{
+  margin-right: auto;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.xiaozi{
+  margin-left: 10px;
+  font-size: 10px;
+  clear: both;
+  letter-spacing: 0.2em;
+}
+.louceng{
+  width: 100%;
+  height: 200px;
+  /* background-color: teal; */
+  display: flex;
+  flex-direction: row;
+}
+.left{
+  background-color:#084043;
+  width: 35%;
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-radius: 10rpx;
+  opacity: 0.8;
+}
+.right{
+  width: 60%;
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction:column;
+}
+.blue{
+  width: 95%;
+  height: 70px;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: row;
+}
+.a3{
+  margin-top: 10px;
+  width: 95%;
+  height: 70px;
+  background-color:rgb(217, 99, 73);
+  border-radius: 10rpx;
+}
+.a1 {
+  width: 45%;
+  height: 100%;
+  background-color:	rgb(219, 222, 230);
+  border-radius: 10rpx; 
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.a2{
+  margin-left: 5%;
+  width: 50%;
+  height: 100%;
+  background-color:	#63B8FF;
+  border-radius: 10rpx;
+}
+.goodsinfo{
+  width:94vw;
+  background-color: #f6f3f3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.guanggao{
+  width:46vw ;
+  height: 42vh;
+}
+.goods{
+  width:46vw ;
+  height: 40vh;
+  background-color: white;
+  margin-bottom: 1vh ;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.goodimg image{
+   width: 40vw;
+   height: 30vh;
+}
+.goodsname{
+  font-size: 20rpx;
+  margin-bottom: auto;
+  width:40vw;
+  height:5vh;
+  margin-left: 0;
+   /* 超出部分隐藏 */
+ overflow: hidden;    
+}
+.goodsname>text{
+  width: 100%;
+  height: 1vh;
+  margin-left: 0;
+ /* 超出部分隐藏 */
+ overflow: hidden;    
+ /* 文本单行不换行   */
+ /* white-space: nowrap;     */
+ /* 末尾加省略号 */
+ text-overflow:ellipsis; 
+}
+.goodsbottom{
+  display: flex;
+  flex-direction: row;
+}
+.goodprice{
+  margin-right: 20vw;
+  color: red;
+}
+.editcart{
+  flex:3;
+  width:40rpx;
+  height: 40rpx;
+  background-color: #407E98;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:40rpx;
+  color: white;
+}
+

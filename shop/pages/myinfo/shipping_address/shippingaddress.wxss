@@ -1,0 +1,33 @@
+/* pages/myinfo/shipping_address/shippingaddress.wxss */
+.fudong{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  margin-left: 5%;
+  border-bottom: 1rpx solid gainsboro;
+}
+.title{
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  padding:5% 0px 5% 5%;
+}
+.img{
+  padding-right: 5%;
+}
+.img image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.address{
+  background-color:#407E98;
+  width: 60%;
+  height:6vh;
+  position: absolute;
+  bottom: 5vh;
+  left: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

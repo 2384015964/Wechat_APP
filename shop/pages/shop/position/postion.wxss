@@ -1,0 +1,87 @@
+/* pages/shop/position/postion.wxss */
+.header{
+  width: 100%;
+  height: 40px;
+  background-color:#407E98 ;
+  display: flex;
+  align-items: center;
+}
+.picker{
+  color: white;
+  margin-left: 10px;
+}
+.sosuo{
+  transform: rotate(90deg);
+  color: white;
+  margin-left: 2px;
+}
+.waikuang{
+  margin-left: 10px;
+  background-color: white;
+  border-radius: 5rpx;
+  opacity: 0.6;
+  width: 70%;
+  justify-content: center;
+}
+.sosuoinput{
+  margin-left: 20px;
+}
+.bg{
+  background-color:	#E0EEEE;
+  margin-left: 10px;
+  position: absolute;
+}
+.page{
+  background-color:	#E0EEEE;
+  width: 100%;
+  height: 30px;
+  align-items: center;
+  display: flex;
+}
+.location{
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  display: flex;
+}
+.relocation{
+  position: absolute;
+  margin-left: 75%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.font{
+  font-size: 15px;
+  margin-left: 5px;
+  width:70%;
+  overflow: hidden; 
+  white-space: nowrap;
+  text-overflow:ellipsis; 
+}
+.list{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item{
+  background-color: white;
+  height: 50px;
+  width: 95%;
+  display: flex;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  border-bottom: 2px solid #E0EEEE;
+  flex-direction: column;
+  justify-content: center;
+}
+.huanhang{
+  word-break:break-all;
+  font-size: 12px;
+
+}
+
+

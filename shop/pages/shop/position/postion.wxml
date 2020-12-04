@@ -1,0 +1,34 @@
+<!--pages/shop/position/postion.wxml-->
+<view class="header">
+	<picker bindchange="changecity" value="{{index}}" range="{{array}}">
+		<view class="picker">
+			{{array[index]}}
+		</view>
+	</picker>
+	<view class="sosuo">></view>
+	<view class="waikuang">
+		<view class="sosuoinput">
+			<input placeholder="搜索附近的小区、写字楼、学校"></input>
+		</view>
+	</view>
+</view>
+<view class="page">
+	<view class="bg"> 当前位置</view>
+</view>
+<view class="location">
+	<view  class="font">{{location}}</view>
+	<view class="relocation">
+		<view bindtap="Relocation">重新定位</view>
+		<image src="../../icon/dinwei.png" style="width:16px;height:16px;"></image>
+	</view>
+</view>
+<view class="page">
+	<view class="bg">附近地标</view>
+</view>
+<scroll-view class="list">
+<view bindtap="xuanweizhi" wx:for="{{list}}" wx:for-item="value"  wx:key="this" data-index="{{key}}"  wx:for-index="key" class="item" > 
+<text  >{{value.title}}</text>\n<text class="huanhang">{{(value.address)}}</text>
+
+</view>
+
+</scroll-view>

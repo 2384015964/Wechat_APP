@@ -1,0 +1,14 @@
+<!--pages/myinfo/newaddress/newaddress.wxml-->
+<form class="biaodan" bindsubmit="submit">
+<view class="row"><text class="title">姓名</text>
+<input placeholder="收货人姓名" name="uname" ></input></view>
+<view class="row"><text class="title">手机号码</text>
+<input placeholder="收货人手机号" name="uphone"  ></input></view>
+<view class="row"><text class="title">详细地址</text>
+<input style="width:70%" placeholder="请填写详细地址，如：街道，楼牌号" name="address"  ></input></view>
+<view class="row">
+<text style="margin-right:auto;">设为默认地址</text>
+ <switch checked="{{switch1Checked}}" bindchange="switch1Change" name="switchChecked"/>
+</view>
+<button type="primary" form-type="submit" bindtap="baocun">保存</button>
+</form>

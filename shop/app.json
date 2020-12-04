@@ -1,0 +1,59 @@
+{
+  "pages":[
+    "pages/shop/shop",
+    "pages/shop/search/search",
+    "pages/sorts/sorts",
+    "pages/cartfull/cartfull",
+    "pages/myinfo/myinfo",
+    "pages/login/login",
+    "pages/sorts/productlist/productlist",
+    "pages/sorts/gooddetail/gooddetail",
+    "pages/cartfull/pay/pay",
+    "pages/myinfo/shipping_address/shippingaddress",
+    "pages/myinfo/newaddress/newaddress",
+    "pages/myinfo/allorder/allorder"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#407E98",
+    "navigationBarTitleText": "电子商城",
+    "navigationBarTextStyle":"white"
+  },
+    "tabBar": {
+      "selectedColor": "#D53E37",
+      "borderStyle": "white",
+      "list": [
+       {
+        "pagePath": "pages/shop/shop",
+        "text": "首页",
+        "iconPath": "pages/icon/home.png",
+        "selectedIconPath": "pages/icon/home1.png"
+      },
+      {
+        "pagePath": "pages/sorts/sorts",
+        "text": "分类",
+        "iconPath": "pages/icon/all.png",
+        "selectedIconPath": "pages/icon/all1.png"
+      },
+      {
+        "pagePath": "pages/cartfull/cartfull",
+        "text": "购物车",
+        "iconPath": "pages/icon/cart.png",
+        "selectedIconPath": "pages/icon/cart1.png"
+      },
+      {
+        "pagePath": "pages/myinfo/myinfo",
+        "text": "我的",
+        "iconPath": "pages/icon/user.png",
+        "selectedIconPath": "pages/icon/user1.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+  
+}

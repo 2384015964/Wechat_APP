@@ -1,0 +1,10 @@
+<!--pages/myinfo/allorder/allorder.wxml-->
+<view class="tabs">
+	<view wx:for="{{tabs}}" bindtap="clicktab" class="tabsbox" data-index="{{index}}" wx:key="key1">
+		<view ><text class="titlename {{item.isactive?'active':''}}" >{{item.title}}</text></view>
+	</view>
+</view>
+<block wx:if="{{tabs[0].isactive}}">1</block>
+<block wx:if="{{tabs[1].isactive}}">2</block>
+<block wx:if="{{tabs[2].isactive}}">3</block>
+<block wx:if="{{tabs[3].isactive}}">4</block>

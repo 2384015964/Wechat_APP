@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <view class="const">
+    <view class="username">用户名
+      <input class="input" value='{{username}}' placeholder="请输入用户名" bindinput="form1"></input>
+    </view>
+    <view class="password">密码
+      <input type="password"  class="input " placeholder="请输入密码" value="{{password}}" bindinput="form2"></input>    
+    </view>
+
+    <button type="primary" bindtap="onclick">登录</button>
+    <button bindtap="youke">游客登录</button>
+  </view>
+</view>

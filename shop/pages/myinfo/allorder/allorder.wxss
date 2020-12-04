@@ -1,0 +1,19 @@
+/* pages/myinfo/allorder/allorder.wxss */
+.tabs{
+  width: 100%;
+  height: 5vh;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  /* align-items: center; */
+}
+.tabsbox{
+  flex: 3;
+  width: 33%;
+}
+.active{
+  border-bottom: 8rpx solid #407E98 ;
+  color: #407E98;
+  font-weight: bold;
+}

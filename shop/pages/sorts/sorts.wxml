@@ -1,0 +1,29 @@
+<!--pages/sorts/sorts.wxml-->
+<view class="head">
+	<view class="search" bindtap="search">
+		<image src="../icon/search.png" mode="aspectFit" style="width:30px;height:25px;"></image>
+		<navigator url="../shop/search/search">搜索商品</navigator>
+	</view>
+</view>
+<!-- 左侧分类 -->
+<view class="body">
+	<scroll-view scroll-y="true" class="left">
+		<view class="leftlist" bindtap="clickitem" wx:for="{{leftlist}}" wx:key="key" data-index="{{index}}">
+			<view class="leftitem {{index==clickindex?'active':''}}">{{item.cat_name}}
+			</view>
+		</view>
+	</scroll-view>
+	<!-- 右侧分类 -->
+	<scroll-view class="right" scroll-y="true" scroll-top="{{listheight}}" enable-flex="true">
+		<view wx:for="{{rightlist}}" class="rightitems" data-index="index1" wx:key="key2">
+			<view class="righttitle">/{{item.cat_name}}/</view>
+			<view class="goodlist" >
+				<navigator hover-class="none"  wx:for="{{item.children}}" class="box" wx:for-index="index2" wx:for-item="item2" wx:key="key2"
+				url="./productlist/productlist?cid={{item2.cat_id}}">
+					<image mode="widthFix" src="{{item2.cat_icon}} "style="width:100%" ></image>
+					<view>{{item2.cat_name}}</view>
+			</navigator> 
+			</view>
+		</view>
+	</scroll-view>
+</view>

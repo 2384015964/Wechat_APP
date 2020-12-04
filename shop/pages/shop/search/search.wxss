@@ -1,0 +1,72 @@
+/* pages/shop/search/search.wxss */
+.list{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.namelist{
+  border-bottom: 2rpx solid gainsboro;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin: 4% 0 5% 5%;
+}
+.head{
+  width:100%;
+  height:8vh;
+  background-color:#407E98;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+.search{
+  background-color: white;
+  opacity: 0.4;
+  font-size: 18px;
+  margin-left:5%;
+  margin-right: 2%;
+  width: 80%;
+  height:66%;
+  display: flex;
+  align-items: center;
+  border-radius: 50rpx;
+}
+.searchlist{
+  display: flex;
+  width: 100%;
+}
+.btn_search{
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.leftgoods{
+  flex:2;
+  width: 30%;
+  height: 20vh;
+  background-color: red;
+  
+}
+.img{
+  width:100%;
+  height:100%;
+  }
+.rightgoods{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  /* background-color: blue; */
+  /* align-items: flex-end; */
+  /* justify-content: space-between; */
+}
+.goodstitle{
+  margin-bottom: auto;
+}
+.bottom{
+  display: flex;
+}
+.price{
+  color: red;
+  margin-right: auto;
+}

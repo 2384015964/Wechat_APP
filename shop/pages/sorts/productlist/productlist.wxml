@@ -1,0 +1,31 @@
+<!--pages/sorts/productlist/product list.wxml-->
+<view class="head">
+	<view class="search" bindtap="search">
+		<image src="../../icon/search.png" mode="aspectFit" style="width:30px;height:25px;"></image>
+		<navigator hover-class="none" url="../../shop/search/search">搜索商品</navigator>
+	</view>
+</view>
+<view class="tabs">
+	<view wx:for="{{tabs}}" bindtap="clicktab" class="tabsbox" data-index="{{index}}" wx:key="key1">
+		<view class="titlename {{item.isactive?'active':''}}">{{item.title}}</view>
+	</view>
+</view>
+<block wx:if="{{tabs[0].isactive}}">
+	<view class="no1">
+		<navigator hover-class="none" wx:for="{{goods}}" wx:key="key2" class="no1goods"
+		url="../gooddetail/gooddetail?goods_id={{item.goods_id}}"
+		>
+			<view class="leftgoods">
+      <image class="img" mode="wdithFix" src="{{item.goods_big_logo?item.goods_big_logo:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596620416937&di=b7bdd94802eb4497515e2b48f1155978&imgtype=0&src=http%3A%2F%2Fimages.sucaihuo.com%2Fjquery%2F27%2F2783%2Fbig.jpg'}}"></image>
+      </view>
+			<view class="rightgoods">
+				<view class="goodstitle" >{{item.goods_name}}</view>
+				<view class="bottom">
+         <view class="price" >￥{{item.goods_price}}</view>
+        </view>
+			</view>
+		</navigator>
+	</view>
+</block>
+<!-- <block wx:if="{{tabs[1].isactive}}">1</block>
+<block wx:if="{{tabs[2].isactive}}">2</block> -->

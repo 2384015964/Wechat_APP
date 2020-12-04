@@ -1,0 +1,173 @@
+/* pages/cartfull/cartfull.wxss */
+
+.conent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2rpx solid  rgb(222, 220, 220);
+}
+.useraddress{
+  margin:30rpx auto 30rpx 20rpx
+
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+  opacity: 0.9;
+}
+.img{
+  margin-right: 30rpx;
+}
+.img image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.goodimages image{
+  width:250rpx;
+  height:250rpx;
+}
+.carefull{
+  border-bottom: 2rpx solid #407E98;
+  border-top:2rpx solid #407E98; 
+  margin-top: 20rpx;
+}
+.title{
+  margin: 15rpx auto 15rpx 20rpx;
+  color:black;
+}
+.main{
+  margin-bottom: 8vh;
+}
+.kong{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.tosorts{
+  width: 20vw;
+  border-radius: 50rpx;
+  margin-left: 40vw;
+  text-align: center;
+  padding:15rpx ;
+  background-color:#407E98 ;
+  color: white;
+}
+.goods{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2rpx solid gray;
+}
+.checkbox{
+  flex: 1;
+}
+.goodimages{
+  flex: 4;
+}
+.goodinfo{
+  flex: 5;
+  /* background-color: blue; */
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+}
+.info{
+  margin-bottom: auto;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.pricenum{
+  display: flex;
+  flex-direction: row;
+}
+.price{
+  margin-right:auto;
+  font-size: 40rpx;
+  color: red;
+  font-weight: bold;
+}
+.edit{
+  width: 165rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.num{
+  flex:4;
+  font-size:40rpx;
+  width: 48rpx;
+  text-align: center;
+  background-color: rgb(230, 230, 230);
+}
+.editnum{
+  flex:3;
+  width:55rpx;
+  height: 55rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:61rpx;
+  color: black;
+}
+.editnum1{
+  flex:3;
+  width:55rpx;
+  height: 55rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:55rpx;
+}
+.price1{
+  display: flex;
+  margin-left:auto;
+}
+.bottom{
+  height: 8vh;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  border-top:1rpx solid rgb(222, 220, 220);
+  position: fixed;
+  background-color: white;
+}
+.check2{
+  flex:2;
+  display: flex;
+  align-items: center;
+}
+.eidtcart{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  font-size: 25rpx;
+}
+.count{
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: center;
+  margin-right: 3rpx;
+}
+ .btn{
+  flex:3;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: red;
+  color: white;
+  border-radius: 50rpx;
+  height: 7vh;
+  width: 15vh;
+  font-size: 30rpx;
+}

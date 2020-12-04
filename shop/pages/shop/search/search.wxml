@@ -1,0 +1,27 @@
+<!--pages/shop/search/search.wxml-->
+<view class="head">
+	<view class="search">
+		<image src="../../icon/search.png" mode="aspectFit" style="width:50rpx;height:50rpx;"></image>
+		<input style="height:100%" placeholder="搜索商品" type='text' name="querysp" bindinput="searchinput"></input>
+	</view>
+	<view class="btn_search" bindtap="search">搜索</view>
+</view>
+<view wx:if="{{goods.length==0}}">
+	<view wx:for="{{goodsname}}" wx:key="goodsname">
+		<navigator hover-class="none" url="../../sorts/gooddetail/gooddetail?goods_id={{item.goods_id}}" class="namelist">{{item.goods_name}}</navigator>
+	</view>
+</view>
+<!-- 搜索列表 -->
+<view wx:else>
+	<navigator class="searchlist" wx:for="{{goods}}" wx:key="search2" url="../../sorts/gooddetail/gooddetail?goods_id={{item.goods_id}}">
+		<view class="leftgoods">
+			<image class="img" mode="wdithFix" src="{{item.goods_big_logo?item.goods_big_logo:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596620416937&di=b7bdd94802eb4497515e2b48f1155978&imgtype=0&src=http%3A%2F%2Fimages.sucaihuo.com%2Fjquery%2F27%2F2783%2Fbig.jpg'}}"></image>
+		</view>
+		<view class="rightgoods">
+			<view class="goodstitle">{{item.goods_name}}111111</view>
+			<view class="bottom">
+				<view class="price">￥{{item.goods_price}}111</view>
+			</view>
+		</view>
+	</navigator>
+</view>

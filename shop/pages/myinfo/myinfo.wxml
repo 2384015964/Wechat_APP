@@ -1,0 +1,96 @@
+<view wx:if="{{userinfo.avatarUrl}}" class="conent">
+	<view class="userbg">
+		<image class="img" src="{{userinfo.avatarUrl}}" style="width:105%;height:105%;"></image>
+		<view class="userinfo">
+			<view class="usericon">
+				<image src="{{userinfo.avatarUrl}}"></image>
+			</view>
+			<view class="username">{{userinfo.nickName}}</view>
+		</view>
+	</view>
+	<!-- 会员中心模块 -->
+	<view class="vip">
+		<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1597484603319&di=b136ee1fc9cb772335391240c7f337a3&imgtype=0&src=http%3A%2F%2Ffile06.16sucai.com%2F2016%2F0816%2Fb3e57aa0f60461a958d62cfc6002564f.jpg"></image>
+		<view class="vipicon">
+			<image src="../banner/VIP.png"></image>
+		</view>
+		<view class="viptext">会员中心</view>
+		<view class="vipbutton">
+			<view>立即开通</view>
+		</view>
+	</view>
+	<!-- 订单记录 -->
+	<view class="dingdan">
+		<view class="border">
+			<view>我的订单</view>
+			<navigator hover-class="none" url="./allorder/allorder" style="font-size:25rpx;opacity: 0.8">查看全部></navigator>
+		</view>
+		<view class="moukua">
+			<navigator hover-class="none">
+				<view class="iconfont icon-daifahuo"></view>
+				<view>待发货</view>
+			</navigator>
+			<navigator hover-class="none">
+				<view class=" iconfont icon-daishouhuo"></view>
+				<view>待收货</view>
+			</navigator>
+			<navigator hover-class="none">
+				<view class="iconfont icon-tubiaolunkuo-"></view>
+				<view>售后/退款</view>
+			</navigator>
+		</view>
+	</view>
+	<view class="dingdan">
+		<view class="border">
+			<view>我的服务</view>
+		</view>
+		<view class="moukua">
+			<navigator hover-class="none">
+				<view class="iconfont icon-4huiyuanfuwu"></view>
+				<view>会员服务</view>
+			</navigator>
+			<navigator hover-class="none" url="../myinfo/shipping_address/shippingaddress">
+				<view class="iconfont icon-shouhuodizhi"></view>
+				<view>收货地址</view>
+			</navigator>
+			<navigator hover-class="none">
+				<view class="iconfont icon-yaoqingyouli"></view>
+				<view>邀请有礼</view>
+			</navigator>
+			<navigator hover-class="none" open-type="contact">
+				<view class="iconfont icon-lianxikefu"></view>
+				<view >联系客服</view>
+			</navigator>
+		</view>
+		<view class="moukua">
+			<navigator hover-class="none">
+				<view class="iconfont icon-yijianfankui"></view>
+				<view>意见反馈</view>
+			</navigator>
+			<navigator hover-class="none">
+				<view class="iconfont icon-1xiazaiappdingyuegongzhonghaobai"></view>
+				<view>下载APP</view>
+			</navigator>
+			<navigator hover-class="none">
+				<view class="iconfont icon-icon-test"></view>
+				<view>设置</view>
+			</navigator>
+			<navigator>
+			</navigator>
+		</view>
+	</view>
+</view>
+<!-- 申请登录 -->
+<view wx:else>
+	<view class='header'>
+		<image src='../banner/duck.jpg'></image>
+	</view>
+	<view class='content'>
+		<view>申请获取个人以下权限</view>
+		<text>获得你的公开信息(昵称，头像等)</text>
+	</view>
+
+	<button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+		授权登录
+	</button>
+</view>

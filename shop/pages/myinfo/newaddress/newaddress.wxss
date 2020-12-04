@@ -1,0 +1,21 @@
+/* pages/myinfo/newaddress/newaddress.wxss */
+.row{
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid gainsboro;
+  width: 90%;
+  margin-left: 5%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+.title{
+  margin-right: 10%;
+  width: 20%;
+}
+input{
+  font-size:25rpx;
+}
+button{
+  border-radius: 2rem;
+  width: 90%;
+}

@@ -1,0 +1,63 @@
+<!--pages/sorts/gooddetail/gooddetail.wxml-->
+<view class="center" wx:if="{{goodsbanner.length!==0}}">
+	<view class="banner">
+		<swiper indicator-dots autoplay interval="2000">
+			<swiper-item wx:for="{{goodsbanner}}" wx:key="key" bindtap="haldimage" data-url="{{item.pics_mid}}">
+				<image mode="widthFix" src="{{item.pics_mid}}"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+	<view class="detailprice">￥{{goodsinfo.goods_price}}</view>
+	<view class="goodsinfo">
+		<view class="goodname">{{goodsinfo.goods_name}}</view>
+		<view class="shoucang">
+			<view bindtap="shoucang" style="display:{{display}}">
+				<image src="../../banner/love.png"></image>
+			</view>
+			<view bindtap="shoucang1" style="display:{{display1}}">
+				<image src="../../banner/love1.png" style="width:50rpx;height:50rpx;"></image>
+			</view>
+			<view>收藏</view>
+		</view>
+	</view>
+	<view class="tuweng">
+		<view class="title">
+			<view style="margin-left: 3%;">图文详情</view>
+		</view>
+		<view class="goodsconent">
+			<rich-text nodes="{{goodsinfo.goods_introduce}}"></rich-text>
+		</view>
+	</view>
+	<!-- 底部工具栏 -->
+	<view class="tools">
+		<view class="tool_obj">
+			<view class="iconfont ei-icon-zkefu1"></view>
+			<view>联系客服</view>
+			<button open-type="contact">联系客服</button>
+		</view>
+		<view class="tool_obj">
+			<view class="iconfont ei-icon-zfenxiang"></view>
+			<view>分享</view>
+			<button open-type="share">分享给好友</button>
+		</view>
+		<navigator hover-class="none" open-type="switchTab" url="../../cartfull/cartfull" class="tool_obj">
+			<view class="iconfont ei-icon-zgouwuche"></view>
+			<view>购物车</view>
+			<view class="xiaohongdian" style="display:{{hongdian}}">{{addnum}}</view>
+		</navigator>
+		<view class="buy" bindtap="buy">
+		</view>
+		<view class="addsort" bindtap="addsort">
+			<view>加入购物车</view>
+			<!-- <view class="xiaohongdian" style="display:{{hongdian}}">{{addnum}}</view> -->
+		</view>
+	</view>
+	<!-- 锚点置顶 -->
+	<view class="anchor" style="display:{{maodian}}" bindtap="maodian">
+		<view style="transform: rotate(270deg);">></view>
+		<view style="font-size:20rpx; color:white;">返回顶部</view>
+	</view>
+</view>
+<view wx:else>
+<text>暂无内容，敬请期待</text>
+</view>

@@ -1,0 +1,21 @@
+<!--pages/myinfo/shipping_address/shippingaddress.wxml-->
+<view class="conent">
+	<view class="useraddress " wx:for="{{address}}" wx:key="address">
+     <view class="fudong">
+		   <view class="title">
+			 <view><text>{{item.address}}</text><text style="display:{{display}}" >{{item.switchChecked}}</text></view>
+			 <text>{{item.uname}}</text>
+			 <text>{{item.uphone}}</text>
+			 </view>
+			 <view class="img">
+		<image src="../../banner/edit.png"></image>
+	</view>
+		 </view>
+	</view>
+</view>
+<!-- 底部添加 -->
+<view class="editaddress">
+<navigator hover-class="none" class="address" url="../newaddress/newaddress"><text>+手动添加</text></navigator>
+<navigator></navigator>
+
+</view>

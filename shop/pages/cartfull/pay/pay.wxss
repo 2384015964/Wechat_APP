@@ -1,0 +1,118 @@
+/* pages/cartfull/pay/pay.wxss */
+.conent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2rpx solid  rgb(222, 220, 220);
+}
+.useraddress{
+  margin:30rpx auto 30rpx 20rpx
+
+}
+.user{
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+  opacity: 0.9;
+}
+.img{
+  margin-right: 30rpx;
+}
+.img image{
+  width: 48rpx;
+  height: 48rpx;
+}
+.goodimages image{
+  width:250rpx;
+  height:250rpx;
+}
+.carefull{
+  border-bottom: 2rpx solid red;
+  border-top:2rpx solid red; 
+  margin-top: 20rpx;
+}
+.title{
+  margin: 15rpx auto 15rpx 20rpx;
+  color: red;
+}
+.goods{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2rpx solid gray;
+}
+.goodimages{
+  flex: 4;
+}
+.goodinfo{
+  flex: 6;
+  /* background-color: blue; */
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+}
+.info{
+  margin-bottom: auto;
+}
+
+.pricenum{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.price{
+  margin-right:auto;
+  font-size: 40rpx;
+  color: red;
+  font-weight: bold;
+}
+.edit{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.num{
+  margin-right: 15rpx;
+  font-size:50rpx;
+}
+.editnum{
+  width:60rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size:40rpx;
+}
+.price1{
+  display: flex;
+  margin-left:auto;
+}
+.bottom{
+  height: 8vh;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  border-top:1rpx solid rgb(222, 220, 220);
+  position: fixed;
+  background-color: white;
+}
+.count{
+  flex:7;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  align-items: center;
+}
+ .btn{
+  flex:3;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: red;
+  color: white;
+  border-radius: 50rpx;
+  height: 7vh;
+  width: 15vh;
+  font-size: 30rpx;
+}
