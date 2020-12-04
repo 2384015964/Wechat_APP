@@ -1,4 +1,5 @@
 // pages/sorts/productlist/product list.js
+const $Getproductlist=require("../../../utils/api.js").Getproductlist
 Component({
   /**
    * 组件的属性列表
@@ -55,27 +56,18 @@ Component({
     },
       getsearch(cid){
       var that=this
-      wx.request({
-        url: 'https://api-hmugo-web.itheima.net/api/public/v1/goods/search',
-         data:{cid},
-        header: {
-          "content-type": 'application/json'
-        },
-        method: "get",
-        success(res){
-          console.log(res)
+        $Getproductlist.getproductlist(cid)
+        .then(res=>{
           let result=res.data.message.goods
-          // let id=res.data.message.goods.cat_id
-          // console.log(id)
           that.setData({
              goods:result,
-            //  oncid:id
           })
-          // console.log(oncid)
           wx.stopPullDownRefresh()
-          // console.log(cat_id)
-        },
-      })
+        })
+        .catch(err=>{
+          console.log(err)
+        })
+         
     },
    clicktab(e){
      var id=e.currentTarget.dataset.index

@@ -28,13 +28,21 @@ const HTTP_url="https://api-hmugo-web.itheima.net/api/public/v1/";
         })
       })
  }
- const SearchAPI = {
-  getsearch: (data) => request(GET,`goods/search?cid=${data}`),
+ const API = {
+  getdemolist: (data) => request(GET,`goods/search?cid=${data}`),
+  getdaohang:(data)=> request(GET,`home/catitems`,data),
+  getsortlist:(data)=>request(GET,`categories`,data),
+  getqsearch:(data)=>request(GET,`goods/qsearch?query=${data}`), //关键字实时加载搜索
+  getsearch:(data)=>request(GET,`goods/search?query=${data}`),//点击搜索后列表搜索
+  getproductlist:(data)=>request(GET,`goods/search?cid=${data}`),//通过页面参数cid获取商品列表
+  getdetail:(data)=>request(GET,`goods/detail?goods_id=${data}`)//商品详情
 };
-const DaoHang={
-  getdaohang:(data)=> request(GET,`home/catitems`,data)
-}
 module.exports = {
-  SearchAPI: SearchAPI,
-  DaoHang:DaoHang
+  DemolistAPI:API,
+  DaoHang:API,
+  Sortlist:API,
+  GetQsearch:API,
+  Getseach:API,
+  Getproductlist:API,
+  Getdetail:API,
 }

@@ -1,4 +1,5 @@
 // pages/sorts/gooddetail/gooddetail.js
+const $getdetail=require("../../../utils/api.js").Getdetail
 Page({
 
   /**
@@ -15,24 +16,19 @@ Page({
   },
   Goodsarray:{},
    getgooddetail(goods_id){
-      wx.request({
-        url: 'https://api-hmugo-web.itheima.net/api/public/v1/goods/detail',
-        data: {goods_id},
-        header: {
-          "content-type": 'application/json'
-        },
-        method: "get",
-        success: (result) => {
-           console.log(result)
-           const pics=result.data.message
+   $getdetail.getdetail(goods_id)
+      .then(res=>{
+        const pics=res.data.message
            console.log(pics)
            this.Goodsarray=pics
            this.setData({
             goodsbanner:pics.pics,
-            goodsinfo:result.data.message
+            goodsinfo:res.data.message
            })
-        },
-      })    
+      })
+      .catch(err=>{
+        console.log(err)
+      })
    },
    //点击图片放大预览
    haldimage(e){
@@ -139,9 +135,7 @@ Page({
    */
   onLoad: function (options) {
     const id=options
-    console.log(id)
     const goods_id=id.goods_id
-    console.log(goods_id)
     this.getgooddetail(goods_id)
     wx.showLoading({
       title: '加载中',

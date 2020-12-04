@@ -37,11 +37,7 @@ Page({
         });
        }
     },
-    shippingaddress(){
-      wx.navigateTo({
-        url: './shipping_address/shippingaddress',
-      })
-    },
+
   /**
    * 生命周期函数--监听页面加载
    */

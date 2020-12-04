@@ -2,7 +2,7 @@
 var QQMapWX = require('../sdk/qqmap-wx-jssdk.min.js');
 var qqmapsdk;
 var app = getApp();
-const $getsearch = require('../../utils/api.js').SearchAPI
+const $getdemolist = require('../../utils/api.js').DemolistAPI
 const $getdaohang=require('../../utils/api.js').DaoHang
 Page({
 
@@ -44,9 +44,6 @@ Page({
     // 实例化腾讯地图API核心类
     this.getsearch()
     this.getdaohang()
-    wx.setNavigationBarTitle({
-      title: '夜刀商城'
-    })
     var that = this;
     // 实例化腾讯地图API核心类
     qqmapsdk = new QQMapWX({
@@ -230,7 +227,7 @@ Page({
   getsearch() {
     var that = this
     let cid = that.data.testid
-    $getsearch.getsearch(cid)
+    $getdemolist.getdemolist(cid)
       .then(res => {
         let result = res.data.message.goods
         that.setData({

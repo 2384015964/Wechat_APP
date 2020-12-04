@@ -1,4 +1,6 @@
 // pages/shop/search/search.js
+const $GetQsearch=require("../../../utils/api.js").GetQsearch
+const $Getsearch=require("../../../utils/api.js").Getseach
 Component({
   /**
    * 组件的属性列表
@@ -34,42 +36,33 @@ Component({
       let query=this.data.query
       console.log(query)
       var that=this
-      wx.request({
-        url: 'https://api-hmugo-web.itheima.net/api/public/v1/goods/qsearch',
-        data:{query},
-        header: {
-          "content-type": 'application/json'
-        },
-        method: "get",
-        success(res){
-          console.log(res)
-          let result=res.data.message
-          that.setData({
-            goodsname:result
-          })
-        }
-      })
+       $GetQsearch.getqsearch(query)
+       .then(res=>{
+        let result=res.data.message
+        that.setData({
+          goodsname:result
+        })
+       })
+       .catch(err=>{
+         console.log(err)
+       })
+        
      },
     search(){
       //点击搜索完成列表渲染
       let query=this.data.query
       var that=this
-      wx.request({
-        url: 'https://api-hmugo-web.itheima.net/api/public/v1/goods/search',
-        data:{query},
-        header: {
-          "content-type": 'application/json'
-        },
-        method: "get",
-        success(res){
-          let result=res.data.message.goods
-          // let id=res.data.message.goods.cat_id
-          // console.log(id)
-          that.setData({
-            goods:result
-          })
-        }
+      $Getsearch.getsearch(query)
+      .then(res=>{
+        let result=res.data.message.goods
+        that.setData({
+          goods:result
+        })
       })
+      .catch(err=>{
+         console.log(err)
+      })
+      
     }
   }
 })

@@ -1,4 +1,5 @@
 // pages/sorts/sorts.js
+ const $sortlist=require("../../utils/api.js").Sortlist
 Page({
 
   /**
@@ -40,26 +41,24 @@ Page({
   },
   getlist(e) {
     var that =this
-    wx.request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/categories',
-      header: {
-        "content-type": 'application/json'
-      },
-      method: "get",
-      success(res) {
-        // console.log('分类列表',res)
-       let list=res.data.message
-       let sortslist=res.data
-      //  console.log(list)
-          that.data.endlist=list
-        wx.setStorageSync('sort', {times:Date.now(),data:sortslist})
-        that.setData({
-           leftlist:res.data.message,
-           rightlist:res.data.message[0].children,
-           childrenlist:res.data
-        })
-      }
+    let data=""
+    $sortlist.getsortlist(data)
+    .then(res=>{
+      let list=res.data.message
+      let sortslist=res.data
+     //  console.log(list)
+         that.data.endlist=list
+       wx.setStorageSync('sort', {times:Date.now(),data:sortslist})
+       that.setData({
+          leftlist:res.data.message,
+          rightlist:res.data.message[0].children,
+          childrenlist:res.data
+       })
     })
+    .catch(err=>{
+      console.log(err)
+    })
+        // console.log('分类列表',res)
   },
    clickitem:function(e){
     var id=e.currentTarget.dataset.index

@@ -1,4 +1,4 @@
-// pages/shop/choujiang/choujiang.js
+
 // Page({
 //   data: {
 //     circleList: [],//圆点数组
