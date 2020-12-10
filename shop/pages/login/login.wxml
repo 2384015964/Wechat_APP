@@ -1,4 +1,5 @@
 <!--pages/login/login.wxml-->
+<!-- 此模块是外置模拟登录模块，实际登录以微信小程序个人账号请求登录 -->
 <view class="login">
   <view class="const">
     <view class="username">用户名
@@ -7,8 +8,8 @@
     <view class="password">密码
       <input type="password"  class="input " placeholder="请输入密码" value="{{password}}" bindinput="form2"></input>    
     </view>
-
     <button type="primary" bindtap="onclick">登录</button>
     <button bindtap="youke">游客登录</button>
   </view>
 </view>
+<!-- 此模块是外置模拟登录模块，实际登录以微信小程序个人账号请求登录 -->

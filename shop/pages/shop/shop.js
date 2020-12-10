@@ -79,18 +79,13 @@ Page({
       }
     })
   },
-  getdaohang() {
+    async getdaohang() {
     var that = this
-    $getdaohang.getdaohang()
-    .then(res=>{
+    const res=await $getdaohang.getdaohang()
       let carelist = res.data.message
       that.setData({
         images: carelist
       })
-    })
-    .catch(err=>{
-      console.log(err)
-    })
   },
   chooseSezi: function (e) {
     // 用that取代this，防止不必要的情况发生
@@ -224,18 +219,12 @@ Page({
       title: '加入成功',
     })
   },
-  getsearch() {
+   async getsearch() {
     var that = this
     let cid = that.data.testid
-    $getdemolist.getdemolist(cid)
-      .then(res => {
-        let result = res.data.message.goods
+    const res=await $getdemolist.getdemolist(cid)
         that.setData({
-          shopgoods: result,
+          shopgoods: res.data.message.goods
         })
-      })
-      .catch(err => {
-        console.log('请求失败', err)
-      })
   },
 })

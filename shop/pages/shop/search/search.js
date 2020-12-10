@@ -32,37 +32,24 @@ Component({
       })
       this.searchname()
      },
-     searchname(){
+    async searchname(){
       let query=this.data.query
-      console.log(query)
       var that=this
-       $GetQsearch.getqsearch(query)
-       .then(res=>{
+      const res=await $GetQsearch.getqsearch(query)
         let result=res.data.message
         that.setData({
           goodsname:result
         })
-       })
-       .catch(err=>{
-         console.log(err)
-       })
-        
      },
-    search(){
+   async search(){
       //点击搜索完成列表渲染
       let query=this.data.query
       var that=this
-      $Getsearch.getsearch(query)
-      .then(res=>{
+      const res=await $Getsearch.getsearch(query)
         let result=res.data.message.goods
         that.setData({
           goods:result
         })
-      })
-      .catch(err=>{
-         console.log(err)
-      })
-      
     }
   }
 })

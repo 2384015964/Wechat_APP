@@ -15,20 +15,14 @@ Page({
     hongdian:'none'
   },
   Goodsarray:{},
-   getgooddetail(goods_id){
-   $getdetail.getdetail(goods_id)
-      .then(res=>{
+  async getgooddetail(goods_id){
+    const res= await $getdetail.getdetail(goods_id)//请求
         const pics=res.data.message
-           console.log(pics)
            this.Goodsarray=pics
            this.setData({
             goodsbanner:pics.pics,
             goodsinfo:res.data.message
            })
-      })
-      .catch(err=>{
-        console.log(err)
-      })
    },
    //点击图片放大预览
    haldimage(e){

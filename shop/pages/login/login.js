@@ -27,8 +27,8 @@ onclick:function(e){
   wx.request({
     url: 'http://timemeetyou.com:8889/api/private/v1/login',
     data: {
-      username:user,
-      password:psw,
+      username:user,  //admin
+      password:psw,   //123456
     },
     header: {
       "content-type": 'application/json'

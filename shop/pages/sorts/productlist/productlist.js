@@ -54,20 +54,14 @@ Component({
         wx.hideLoading()
       },1000)
     },
-      getsearch(cid){
+     async getsearch(cid){
       var that=this
-        $Getproductlist.getproductlist(cid)
-        .then(res=>{
-          let result=res.data.message.goods
+      const res=await  $Getproductlist.getproductlist(cid)
+       let result=res.data.message.goods
           that.setData({
              goods:result,
-          })
-          wx.stopPullDownRefresh()
         })
-        .catch(err=>{
-          console.log(err)
-        })
-         
+        wx.stopPullDownRefresh()         
     },
    clicktab(e){
      var id=e.currentTarget.dataset.index

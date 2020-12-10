@@ -39,14 +39,11 @@ Page({
      } 
       //  this.getlist()
   },
-  getlist(e) {
+  async getlist(e) {
     var that =this
-    let data=""
-    $sortlist.getsortlist(data)
-    .then(res=>{
+    const res=await $sortlist.getsortlist()
       let list=res.data.message
       let sortslist=res.data
-     //  console.log(list)
          that.data.endlist=list
        wx.setStorageSync('sort', {times:Date.now(),data:sortslist})
        that.setData({
@@ -54,10 +51,6 @@ Page({
           rightlist:res.data.message[0].children,
           childrenlist:res.data
        })
-    })
-    .catch(err=>{
-      console.log(err)
-    })
         // console.log('分类列表',res)
   },
    clickitem:function(e){
