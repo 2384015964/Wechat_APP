@@ -2,7 +2,7 @@
 .backgroud{
   display: flex;
   width: 100%;
-  height:125px;
+  height:25vh;
   background-color: #407E98;
   border-radius: 0 0 30% 30%;
   flex-direction: column;
@@ -10,7 +10,7 @@
 }
 .section{
   width: 95%;
-  height: 30px;
+  height: 5vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -39,7 +39,7 @@
   text-align: center;
 }
 .xialakuang{
-  position:absolute;
+  position:fixed;
   margin-top: 20px;
   margin-left: 25%;
   width:70%;
@@ -81,22 +81,33 @@
 .bg2{
   color: black;
 }
+.toptools{
+  display: flex;
+  width: 100%;
+  background-color: #407E98;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* display: none; */
+  position:fixed;
+  z-index: 3;
+}
 .search{
   background-color: white;
   opacity: 0.3;
   font-size: 18px;
   width: 92%;
-  margin: 5px 5% 5px 5%;
-  height: 30px;
+  margin: 1vh;
+  height: 55rpx;
   display: flex;
   border-radius: 15rpx;
   justify-content: center;
 }
 .bannerview{
+  margin-top: 12vh;
   width: 92%;
   display: flex;
   justify-content: center;
-  margin-left: 2%;
   border-radius: 50px;
 }
 .swiper{
