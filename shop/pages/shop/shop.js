@@ -223,6 +223,7 @@ Page({
     var that = this
     let cid = that.data.testid
     const res=await $getdemolist.getdemolist(cid)
+    console.log('数据',res.data)
         that.setData({
           shopgoods: res.data.message.goods
         })

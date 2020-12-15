@@ -64,10 +64,10 @@
   flex: 1;
 }
 .goodimages{
-  flex: 4;
+  flex: 3.5;
 }
 .goodinfo{
-  flex: 5;
+  flex: 5.5;
   /* background-color: blue; */
   height: 200rpx;
   display: flex;
@@ -92,6 +92,8 @@
   font-weight: bold;
 }
 .edit{
+  right: 10rpx;
+  position: absolute;
   width: 165rpx;
   display: flex;
   flex-direction: row;

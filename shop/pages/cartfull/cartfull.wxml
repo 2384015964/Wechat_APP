@@ -38,7 +38,7 @@
 					</checkbox-group>
 				</view>
 				<navigator class="goodimages" hover-class="none" url="../sorts/gooddetail/gooddetail?goods_id={{item.goods_id}}">
-					<image src="{{item.goods_small_logo}}"></image>
+					<image style="max-width:100%;" src="{{item.goods_small_logo}}"></image>
 				</navigator>
 				<view class="goodinfo">
 					<view class="info">{{item.goods_name}}</view>
