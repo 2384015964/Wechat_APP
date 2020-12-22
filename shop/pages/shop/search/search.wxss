@@ -11,7 +11,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
-  margin: 4% 0 5% 5%;
+  padding: 4% 0 5% 5%;
 }
 .head{
   width:100%;

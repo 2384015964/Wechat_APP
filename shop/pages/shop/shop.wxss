@@ -24,6 +24,9 @@
 }
 .weizhi{
   font-size: 30rpx;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
 }
 .mengdian{
   margin-left:auto;
@@ -88,7 +91,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* display: none; */
   position:fixed;
   z-index: 3;
 }

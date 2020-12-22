@@ -137,6 +137,17 @@ page{
   width: 25%;
   text-align: center;
 }
+.outlogin{
+  background-color: white;
+ justify-content: center;
+  display: flex;
+  width: 98%;
+  margin: 3% 0 0 1%;
+  padding: 3% 0 3% 0;
+  color: red;
+  border-radius: 10rpx;
+  box-shadow: 1rpx 1rpx 8rpx 0.2rpx rgb(201, 201, 201);
+}
 .gongneng{
   display: flex;
   flex-direction:row;

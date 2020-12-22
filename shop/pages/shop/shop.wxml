@@ -25,22 +25,6 @@
 		</navigator>
 	</view>
 	<view class="backgroud">
-		<!-- <view class="section">
-			<navigator hover-class="none" class="dizhi" url="../shop/position/postion">
-				<image src="../icon/weizhi.png" style="width:16px;height:16px;"></image>
-				<view class="weizhi">{{location}}</view>
-			</navigator>
-			<view class="shopname" animation='{{animationshop}}' style="display:{{display2}}">
-				{{mengdian}}
-			</view>
-			<view class="mengdian" bindtap="chooseSezi">
-				<image src="../icon/shop2.png" mode="aspectFit" style="width:30px;height:30px;"></image>
-			</view>
-		</view>
-		<navigator class="search" url="../shop/search/search">
-			<image src="../icon/search.png" mode="aspectFit" style="width:30px;height:25px;"></image>
-			<view>搜索商品</view>
-		</navigator> -->
 		<view class="bannerview">
 			<swiper class="swiper" indicator-dots autoplay interval="2000">
 				<block wx:for="{{imageUrl}}" wx:key="key">
@@ -87,9 +71,9 @@
 		</view>
 		<block>
 			<view class="goodsinfo">
-				<view class="guanggao">
+				<navigator class="guanggao" url="../sorts/gooddetail/gooddetail?goods_id=43980">
 					<image style="max-width: 100%;max-height:100%;" src="../banner/timg.png"></image>
-				</view>
+				</navigator>
 				<view class="goods" wx:for="{{shopgoods}}" wx:key="goods_id">
 					<navigator class="goodimg" url="../sorts/gooddetail/gooddetail?goods_id={{item.goods_id}}">
 						<image src="{{item.goods_big_logo?item.goods_big_logo:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596620416937&di=b7bdd94802eb4497515e2b48f1155978&imgtype=0&src=http%3A%2F%2Fimages.sucaihuo.com%2Fjquery%2F27%2F2783%2Fbig.jpg'}}"></image>

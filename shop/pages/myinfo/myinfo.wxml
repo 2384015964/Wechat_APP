@@ -79,6 +79,9 @@
 			</navigator>
 		</view>
 	</view>
+	<view class="outlogin" bindtap="outlogin">
+	<view>退出登录</view>
+	</view>
 </view>
 <!-- 申请登录 -->
 <view wx:else>

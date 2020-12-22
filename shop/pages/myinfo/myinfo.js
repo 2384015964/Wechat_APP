@@ -11,7 +11,7 @@ Page({
   bindGetUserInfo:function(e){
     if (e.detail.userInfo) {
         //用户按了允许授权按钮
-        console.log(e)
+        // console.log(e)
         const user=e.detail.userInfo;
          wx.setStorageSync("user", user)
          wx.showLoading({
@@ -37,12 +37,28 @@ Page({
         });
        }
     },
-
+    outlogin(){
+      wx.showModal({
+        title: '提示',
+        content: '是否退出登录状态',
+        success: (res)=> {
+          if (res.confirm) {
+          console.log('用户点击确定')
+          wx.removeStorageSync('user')
+          this.setData({
+            userinfo:""
+          })
+          } else if (res.cancel) {
+          console.log('用户点击取消')
+          }
+          }
+      })
+    },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**

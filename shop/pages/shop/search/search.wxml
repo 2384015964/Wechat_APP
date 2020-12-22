@@ -18,9 +18,9 @@
 			<image class="img" mode="wdithFix" src="{{item.goods_big_logo?item.goods_big_logo:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596620416937&di=b7bdd94802eb4497515e2b48f1155978&imgtype=0&src=http%3A%2F%2Fimages.sucaihuo.com%2Fjquery%2F27%2F2783%2Fbig.jpg'}}"></image>
 		</view>
 		<view class="rightgoods">
-			<view class="goodstitle">{{item.goods_name}}111111</view>
+			<view class="goodstitle">{{item.goods_name}}</view>
 			<view class="bottom">
-				<view class="price">￥{{item.goods_price}}111</view>
+				<view class="price">￥{{item.goods_price}}</view>
 			</view>
 		</view>
 	</navigator>

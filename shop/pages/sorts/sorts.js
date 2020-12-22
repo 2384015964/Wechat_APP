@@ -56,7 +56,9 @@ Page({
    clickitem:function(e){
     var id=e.currentTarget.dataset.index
        this.data.jieshouid=id
+      //  console.log('右侧列表数据',res.message[id].children)
     var res= this.data.childrenlist
+    console.log(res)
      this.setData({
         clickindex:id,
         rightlist:res.message[id].children,

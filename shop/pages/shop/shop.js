@@ -44,6 +44,9 @@ Page({
     // 实例化腾讯地图API核心类
     this.getsearch()
     this.getdaohang()
+    this.getuserlocation()
+  },
+   getuserlocation(){
     var that = this;
     // 实例化腾讯地图API核心类
     qqmapsdk = new QQMapWX({
@@ -63,22 +66,21 @@ Page({
           get_poi: 1,
           poi_options: 'policy=2;radius=3000;page_size=10;page_index=1',
           success: function (addressRes) {
-            let weizhi = addressRes;
-            // console.log(weizhi)
             let weiz = addressRes.result
             const huancun = addressRes.result.address_reference.landmark_l2.title
+            const poislist=weiz.pois
+            console.log("附件坐标",poislist)
+            wx.setStorageSync('poislist', poislist)
             wx.setStorageSync('location', huancun)
             // console.log(weiz)
             that.setData({
               location: weiz.address_reference.landmark_l2.title
             })
-            var chuancan = that.data.location
-            // console.log(chuancan)
           }
         })
       }
     })
-  },
+   },
     async getdaohang() {
     var that = this
     const res=await $getdaohang.getdaohang()
@@ -86,6 +88,15 @@ Page({
       that.setData({
         images: carelist
       })
+  },
+  async getsearch() {
+    var that = this
+    let cid = that.data.testid
+    const res=await $getdemolist.getdemolist(cid)
+    console.log('数据',res.data)
+        that.setData({
+          shopgoods: res.data.message.goods
+        })
   },
   chooseSezi: function (e) {
     // 用that取代this，防止不必要的情况发生
@@ -218,14 +229,5 @@ Page({
     wx.showToast({
       title: '加入成功',
     })
-  },
-   async getsearch() {
-    var that = this
-    let cid = that.data.testid
-    const res=await $getdemolist.getdemolist(cid)
-    console.log('数据',res.data)
-        that.setData({
-          shopgoods: res.data.message.goods
-        })
   },
 })

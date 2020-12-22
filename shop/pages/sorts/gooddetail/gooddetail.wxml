@@ -2,8 +2,8 @@
 <view class="center" wx:if="{{goodsbanner.length!==0}}">
 	<view class="banner">
 		<swiper indicator-dots autoplay interval="2000">
-			<swiper-item wx:for="{{goodsbanner}}" wx:key="key" bindtap="haldimage" data-url="{{item.pics_mid}}">
-				<image mode="widthFix" src="{{item.pics_mid}}"></image>
+			<swiper-item class="kuan" wx:for="{{goodsbanner}}" wx:key="key" bindtap="haldimage" data-url="{{item.pics_mid}}">
+				<image class="bannerimg" mode="widthFix" src="{{item.pics_mid}}"></image>
 			</swiper-item>
 		</swiper>
 	</view>

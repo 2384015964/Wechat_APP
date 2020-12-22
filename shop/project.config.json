@@ -99,6 +99,12 @@
 					"pathName": "pages/shop/search/search",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "抽奖",
+					"pathName": "pages/shop/choujiang/choujiang",
+					"scene": null
 				}
 			]
 		}
