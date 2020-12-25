@@ -13,13 +13,11 @@
 			<image src="../banner/edit.png"></image>
 		</view>
 	</view>
+		<view class="title">购物车</view>
 </view>
 <view wx:else>
 	<button type="primary" plain>点击添加收货地址</button>
 </view>
-	<view class="carefull">
-		<view class="title">购物车</view>
-	</view>
 	<view class="main">
 		<view wx:if="{{cart.length==0}}">
 			<view class="kong">

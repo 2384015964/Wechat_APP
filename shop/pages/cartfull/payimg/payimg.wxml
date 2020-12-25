@@ -1,0 +1,9 @@
+<!--pages/cartfull/payimg/payimg.wxml-->
+<view class="container">
+<view class="bg">
+<view class="pay" >
+<image class="img" src="../../weixinpay/pay.png"></image>
+</view>
+<text style="color:white">支付￥{{money}}</text>
+</view>
+</view>

@@ -15,6 +15,20 @@ Page({
     hongdian:'none'
   },
   Goodsarray:{},
+  maodian(){
+    wx.pageScrollTo({
+      scrollTop:0
+    })
+    if (wx.scrollTop==0){
+      this.setData({
+        maodian:'none'
+      })
+    }else if(wx.scrollTop==900){
+      this.setData({
+        maodian:''
+      })
+    }
+ },
   async getgooddetail(goods_id){
     const res= await $getdetail.getdetail(goods_id)//请求
         const pics=res.data.message
@@ -114,16 +128,6 @@ Page({
   }
 },
 // 锚点
- maodian(){
-    wx.pageScrollTo({
-      scrollTop:0
-    })
-    if (wx.scrollTop==0){
-      this.setData({
-        maodian:'none'
-      })
-    }
- },
   /**
    * 生命周期函数--监听页面加载
    */

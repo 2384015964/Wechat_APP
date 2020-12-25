@@ -1,7 +1,7 @@
 <!--pages/sorts/gooddetail/gooddetail.wxml-->
 <view class="center" wx:if="{{goodsbanner.length!==0}}">
 	<view class="banner">
-		<swiper indicator-dots autoplay interval="2000">
+		<swiper class="kuan" indicator-dots autoplay interval="2000">
 			<swiper-item class="kuan" wx:for="{{goodsbanner}}" wx:key="key" bindtap="haldimage" data-url="{{item.pics_mid}}">
 				<image class="bannerimg" mode="widthFix" src="{{item.pics_mid}}"></image>
 			</swiper-item>
@@ -15,14 +15,14 @@
 				<image src="../../banner/love.png"></image>
 			</view>
 			<view bindtap="shoucang1" style="display:{{display1}}">
-				<image src="../../banner/love1.png" style="width:50rpx;height:50rpx;"></image>
+				<image src="../../banner/love1.png" style="width:52rpx;height:52rpx;"></image>
 			</view>
-			<view>收藏</view>
+			<text>收藏</text>
 		</view>
 	</view>
 	<view class="tuweng">
 		<view class="title">
-			<view style="margin-left: 3%;">图文详情</view>
+			<view style="margin-left: 3%;font-size:50rpx;">图文详情</view>
 		</view>
 		<view class="goodsconent">
 			<rich-text nodes="{{goodsinfo.goods_introduce}}"></rich-text>

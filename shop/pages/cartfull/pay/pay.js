@@ -11,21 +11,14 @@ Page({
     goodprice:0,
   },
   Pay(){
-    wx.requestPayment(
-      {
-      'timeStamp': '',
-      'nonceStr': '',
-      'package': '',
-      'signType': 'MD5',
-      'paySign': '',
-      'success':function(res){},
-      'fail':function(res){},
-      'complete':function(res){}
-      })
+    wx.navigateTo({
+      url: '../../cartfull/payimg/payimg',
+    })
   },
   onLoad: function (options) {
     
   },
+
   /**
    * 生命周期函数--监听页面显示
    */
@@ -39,6 +32,8 @@ Page({
            goodprice+=v.num*v.goods_price
            goodnum+=v.num
          })
+         console.log(goodprice)
+        wx.setStorageSync('money', goodprice)
       this.setData({
         cart:checked,
         goodprice,

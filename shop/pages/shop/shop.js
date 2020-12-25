@@ -1,9 +1,11 @@
 // pages/shop/shop.js
+
 var QQMapWX = require('../sdk/qqmap-wx-jssdk.min.js');
 var qqmapsdk;
 var app = getApp();
 const $getdemolist = require('../../utils/api.js').DemolistAPI
 const $getdaohang=require('../../utils/api.js').DaoHang
+const $mapApi=require("../../utils/map.js")
 Page({
 
   /**
@@ -46,40 +48,21 @@ Page({
     this.getdaohang()
     this.getuserlocation()
   },
-   getuserlocation(){
+    async getuserlocation(){
     var that = this;
     // 实例化腾讯地图API核心类
-    qqmapsdk = new QQMapWX({
-      key: 'BQSBZ-AANRP-TWVDJ-VAAXI-C3HA2-AOBEG'
-    });
-    //1、获取当前位置坐标
-    wx.getLocation({
-      type: 'gcj02',
-      success: function (res) {
-        // console.log(res);
-        //2、根据坐标获取当前位置名称，显示在顶部:腾讯地图逆地址解析
-        qqmapsdk.reverseGeocoder({
-          location: {
-            latitude: res.latitude,
-            longitude: res.longitude
-          },
-          get_poi: 1,
-          poi_options: 'policy=2;radius=3000;page_size=10;page_index=1',
-          success: function (addressRes) {
+     const addressRes=await $mapApi
+     console.log('位置数据',addressRes)
+     console.log('处理数据')
             let weiz = addressRes.result
             const huancun = addressRes.result.address_reference.landmark_l2.title
             const poislist=weiz.pois
             console.log("附件坐标",poislist)
             wx.setStorageSync('poislist', poislist)
             wx.setStorageSync('location', huancun)
-            // console.log(weiz)
             that.setData({
               location: weiz.address_reference.landmark_l2.title
             })
-          }
-        })
-      }
-    })
    },
     async getdaohang() {
     var that = this

@@ -9,6 +9,7 @@
     "pages/sorts/productlist/productlist",
     "pages/sorts/gooddetail/gooddetail",
     "pages/cartfull/pay/pay",
+    "pages/cartfull/payimg/payimg",
     "pages/myinfo/shipping_address/shippingaddress",
     "pages/myinfo/newaddress/newaddress",
     "pages/myinfo/allorder/allorder"

@@ -140,9 +140,6 @@ Page({
     this.setData({
       address:location
     })
-    // const goods=wx.getStorageSync('zongshu')
-    // const allchecked=cart.length?cart.every(v=>v.checked):false
-    // console.log(cart)
     this.countgoodsnums()
   },
 

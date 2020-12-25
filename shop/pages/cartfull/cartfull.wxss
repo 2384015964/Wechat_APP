@@ -4,7 +4,22 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-bottom: 2rpx solid  rgb(222, 220, 220);
+  border-bottom: 2rpx solid #407E98;
+  position:fixed;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+}
+.title{
+  border-bottom: 2rpx solid #407E98;
+  /* border-top: 2rpx solid #407E98; */
+  width: 100%;
+  position:fixed;
+  top: 15vh;
+  z-index: 998;
+  padding :3%;
+  background-color: white;
 }
 .useraddress{
   margin:30rpx auto 30rpx 20rpx
@@ -27,23 +42,16 @@
   width:250rpx;
   height:250rpx;
 }
-.carefull{
-  border-bottom: 2rpx solid #407E98;
-  border-top:2rpx solid #407E98; 
-  margin-top: 20rpx;
-}
-.title{
-  margin: 15rpx auto 15rpx 20rpx;
-  color:black;
-}
 .main{
   margin-bottom: 8vh;
+  margin-top: 26vh;
 }
 .kong{
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: 40vh;
 }
 .tosorts{
   width: 20vw;

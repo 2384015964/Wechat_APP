@@ -1,0 +1,28 @@
+/* pages/cartfull/payimg/payimg.wxss */
+.container{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100%;
+}
+.bg{
+  background-color: teal;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:60vh;
+  width: 90vw;
+  flex-direction: column;
+}
+.pay{
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+/* .img{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5rpx;
+} */

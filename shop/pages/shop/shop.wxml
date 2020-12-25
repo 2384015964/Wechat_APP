@@ -9,7 +9,7 @@
 	<view class="toptools">
 		<view class="section">
 			<navigator hover-class="none" class="dizhi" url="../shop/position/postion">
-				<image src="../icon/weizhi.png" style="width:16px;height:16px;"></image>
+				<image src="../icon/weizhi.png" style="width:20px;height:20px;"></image>
 				<view class="weizhi">{{location}}</view>
 			</navigator>
 			<view class="shopname" animation='{{animationshop}}' style="display:{{display2}}">
@@ -78,7 +78,7 @@
 					<navigator class="goodimg" url="../sorts/gooddetail/gooddetail?goods_id={{item.goods_id}}">
 						<image src="{{item.goods_big_logo?item.goods_big_logo:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1596620416937&di=b7bdd94802eb4497515e2b48f1155978&imgtype=0&src=http%3A%2F%2Fimages.sucaihuo.com%2Fjquery%2F27%2F2783%2Fbig.jpg'}}"></image>
 					</navigator>
-					<view class="goodsname"><text>{{item.goods_name}}</text></view>
+					<view class="goodsname">{{item.goods_name}}</view>
 					<view class="goodsbottom">
 						<view class="goodprice">￥{{item.goods_price}}</view>
 						<view class="editcart" bindtap="editgoodsnum" data-yunsuanfu="{{1}}" data-index="{{index}}" data-id="{{item.goods_id}}">

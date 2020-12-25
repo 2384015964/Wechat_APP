@@ -38,8 +38,8 @@
 				</view>
 				<view style="margin-left:auto;">已免配送费</view>
 			</view>
-			<view class="btn" bindtap="Pay">
+			<view class="btn" bindtap="Pay" paymonery="{{goodnum}}">
 				<view>支付</view>
-				<view style="display:{{isHidenum}}">({{goodnum}})</view>
+				<view style="display:{{isHidenum}}" >({{goodnum}})</view>
 			</view>
 		</view>
